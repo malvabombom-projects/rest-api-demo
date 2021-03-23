@@ -39,10 +39,41 @@ const usuariosPatch = (req,res)=>{
         "msg":"Hello World"});
 }
 
+
+const productsInfoGet = ( req,res = response )=>{
+    const {q, nombre} = req.query;
+    res.json({
+        "tipe":"get",
+        q,
+        nombre,
+        "msg":'Hello World'});
+}
+
+const productsInfoPost = (req,res)=>{
+    const {nombre, id} = req.body;
+    res.json({
+        "tipe":"post",
+        nombre,
+        id,
+        "msg":"Hello World"});
+}
+
+const storesInfoGet = ( req,res = response )=>{
+    const {q, nombre} = req.query;
+    res.json({
+        "tipe":"get",
+        q,
+        nombre,
+        "msg":'Hello World'});
+}
+
 module.exports= {
     usuariosGet,
     usuariosPost,
     usuariosPut,
     usuariosDelete,
-    usuariosPatch
+    usuariosPatch,
+    productsInfoGet,
+    productsInfoPost,
+    storesInfoGet
 }
