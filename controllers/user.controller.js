@@ -39,10 +39,30 @@ const usuariosPatch = (req,res)=>{
         "msg":"Hello World"});
 }
 
+const dataTodoLis = (req,res)=>{
+    res.json({
+        "title": "Dinamic To Do",
+        "style": {
+            "margin": 12345,
+            "background": "John Doe",
+            "text": "John Doe",
+            "padding": "John Doe",
+            "text-color": "John Doe",
+            "font-size": "John Doe"
+        },
+        "demo": true,
+        "person": {
+            "id": 12345,
+            "name": "John Doe"
+            }
+    });
+}
+
 module.exports= {
     usuariosGet,
     usuariosPost,
     usuariosPut,
     usuariosDelete,
-    usuariosPatch
+    usuariosPatch,
+    dataTodoLis
 }
